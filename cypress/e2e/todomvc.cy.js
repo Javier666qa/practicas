@@ -21,5 +21,12 @@ describe('template spec', () => {
     cy.get('.clear-completed').click()
   })
 
+  it('añadir tarea', () => {
+    cy.visit('https://todomvc.com/examples/typescript-react/#/')
+    cy.get('.new-todo').type("hola{enter}")
+    cy.get('.new-todo').type("cuarta prueba{enter}")
+    cy.get('[for="toggle-all"]') 
+  })
+
 
 })
